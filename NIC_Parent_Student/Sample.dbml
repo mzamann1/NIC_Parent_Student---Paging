@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NIC Parent" Class="SampleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=&quot;NIC Parent&quot;;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NICConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.guardian" Member="guardians">
+    <Type Name="guardian">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="g_Fname" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="g_Lname" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="g_Address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="std_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="student_guardian" Member="student" ThisKey="std_id" OtherKey="std_id" Type="student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.student" Member="students">
+    <Type Name="student" Id="ID1">
+      <Column Name="std_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="std_Fname" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="std_Lname" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="std_class" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="student_guardian" Member="guardians" ThisKey="std_id" OtherKey="std_id" Type="guardian" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spindexWork" Method="spindexWork">
+    <Parameter Name="pageindex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="incr" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

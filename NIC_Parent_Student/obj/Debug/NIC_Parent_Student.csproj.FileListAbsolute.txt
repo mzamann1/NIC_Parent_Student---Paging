@@ -116,3 +116,5 @@ C:\Users\Zaman\Downloads\Compressed\NIC_Parent_Student-master\NIC_Parent_Student
 C:\Users\Zaman\Downloads\Compressed\NIC_Parent_Student-master\NIC_Parent_Student\obj\Debug\NIC_Parent_Student.csproj.CopyComplete
 C:\Users\Zaman\Downloads\Compressed\NIC_Parent_Student-master\NIC_Parent_Student\obj\Debug\NIC_Parent_Student.dll
 C:\Users\Zaman\Downloads\Compressed\NIC_Parent_Student-master\NIC_Parent_Student\obj\Debug\NIC_Parent_Student.pdb
+C:\Users\Zaman\Downloads\Compressed\NIC_Parent_Student-master\NIC_Parent_Student\bin\Newtonsoft.Json.dll
+C:\Users\Zaman\Downloads\Compressed\NIC_Parent_Student-master\NIC_Parent_Student\bin\Newtonsoft.Json.xml

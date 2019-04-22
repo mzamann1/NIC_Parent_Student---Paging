@@ -31,6 +31,15 @@ namespace NIC_Parent_Student {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
+        /// json control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox json;
+        
+        /// <summary>
         /// btnFirst control.
         /// </summary>
         /// <remarks>

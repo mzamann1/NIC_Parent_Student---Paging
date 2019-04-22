@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web.UI.WebControls;
+using Newtonsoft.Json;
 
 namespace NIC_Parent_Student
 {
@@ -304,8 +305,12 @@ namespace NIC_Parent_Student
             using (SampleDataContext db = new SampleDataContext())
             {
                 //db.students.Skip(pageindex * incr).Take(incr);
-                GridView1.DataSource = db.spindexWork(pageindex,incr);
+                var data=db.spindexWork(pageindex, incr);
+                GridView1.DataSource = data;
                 GridView1.DataBind();
+               
+               
+
             }
         }
 

@@ -49,6 +49,9 @@
 
             
         </asp:GridView>
+            <asp:TextBox TextMode="MultiLine" runat="server" ID="json">
+
+            </asp:TextBox>
 
             <tr class="row">
                 <asp:LinkButton runat="server" ID="btnFirst" OnClick="btnFirst_Click" CssClass="p-2 m-2 text-center"> First</asp:LinkButton>
